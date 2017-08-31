@@ -1,0 +1,14 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <title>My AngularJS App</title>
+    <script src="ang.js"></script>
+  </head>
+  <body>
+      <div ng-init="student=[{Roll:'31',Name:'Samy'},{Roll:'41',Name:'Karthi'},{Roll:'19',Name:'Kishore'},{Roll:'59',Name:'Praveen'}]"></div>
+      <p>Student Details:</p>
+      <p ng-repeat='st in student'>
+      Roll no:{{st.Roll}}<br>
+      Name:{{st.Name}}<br></p>    
+  </body>
+</html>
