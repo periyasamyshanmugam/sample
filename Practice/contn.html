@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <title>My AngularJS App</title>
+    <script src="ang.js"></script>
+  </head>
+  <body>
+      <div ng-controller="lang">
+      Select your fav language:
+      <button ng-click="php()">PHP</button>
+        <button ng-click="cpp()">c++</button>
+          <p>You have selected: {{my}}</p>
+      </div>
+      <script>
+        var ap=angular.module('app',[]);
+          ap.controller("lang",function($scope,$http){
+              
+           $scope.php=function(){
+          $scope.my='PHP';
+            };
+          $scope.cpp=function(){
+          $scope.my='C++';
+            };
+          });
+      </script>
+  </body>
+</html>

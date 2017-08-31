@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <title>My AngularJS App</title>
+    <script src="ang.js"></script>
+  </head>
+  <body>
+      <div ng-controller="lang">
+     content in the file:
+      
+          <p>You have selected: {{my}}</p>
+      </div>
+      <script>
+        var ap=angular.module('app',[]);
+          ap.controller("lang",function($scope,$http){
+              $http.get("samp.txt").then(function(response){
+                  $scope.my=response.data});
+          });      
+          
+      </script>
+  </body>
+</html>
